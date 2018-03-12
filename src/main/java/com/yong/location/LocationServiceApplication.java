@@ -1,11 +1,8 @@
-package com.yong.location.locationservice;
+package com.yong.location;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @SpringBootApplication
 public class LocationServiceApplication {
 
@@ -13,8 +10,5 @@ public class LocationServiceApplication {
 		SpringApplication.run(LocationServiceApplication.class, args);
 	}
 
-	@GetMapping
-    public String hello(){
-	    return "Hello World!";
-    }
+
 }
