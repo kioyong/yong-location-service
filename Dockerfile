@@ -1,6 +1,6 @@
 FROM maven:3.5.3
 ADD pom.xml /tmp/build/
-RUN cd /tmp/build && mvn install
+RUN cd /tmp/build && mvn dependency:resolve
 
 ADD src /tmp/build/src
 RUN cd /tmp/build && mvn package \
