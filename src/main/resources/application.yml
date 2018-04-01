@@ -1,2 +1,13 @@
 server:
-  port: 8081
+  port: 9004
+  servlet:
+    context-path: /location
+
+
+spring:
+  application:
+      name: location-service
+  data:
+    mongodb:
+      uri: mongodb://139.199.189.64:32770/location
+      database: location
