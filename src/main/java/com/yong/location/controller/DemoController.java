@@ -10,13 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    @GetMapping
-    public String hello(){
-        return "Hello World!";
+    private int count = 0;
+
+
+    @GetMapping()
+    public String getLocation() {
+        return "GuangZhou";
     }
 
-    @GetMapping("/location")
-    public String getLocation(){
-        return "GuangZhou";
+    @GetMapping("/count")
+    public Integer getCount() {
+        return count++;
     }
 }
