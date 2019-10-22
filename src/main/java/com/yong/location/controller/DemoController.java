@@ -19,7 +19,7 @@ public class DemoController {
     private boolean isEnable;
 
     @GetMapping()
-    public String getLocation() {it 
+    public String getLocation() {
         return "GuangZhou " + isEnable;
     }
 
