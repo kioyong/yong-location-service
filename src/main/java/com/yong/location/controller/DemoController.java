@@ -1,5 +1,6 @@
 package com.yong.location.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,10 +15,12 @@ public class DemoController {
 
     private AtomicLong atomicLong = new AtomicLong();
 
+    @Value("${mce.isEnable:false}")
+    private boolean isEnable;
 
     @GetMapping()
-    public String getLocation() {
-        return "GuangZhou";
+    public String getLocation() {it 
+        return "GuangZhou " + isEnable;
     }
 
     @GetMapping("/count")
